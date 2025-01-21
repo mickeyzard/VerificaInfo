@@ -38,6 +38,8 @@ public class AreaRettangolo extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Area Rettangolo"));
+
         jLabel1.setText("Lunghezza della base");
 
         jLabel2.setText("Lunghezza dell'altezza");
