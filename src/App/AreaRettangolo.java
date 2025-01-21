@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package App;
-
+import  javax.swing.JOptionPane;
 /**
  *
  * @author ospite
@@ -136,10 +136,16 @@ public class AreaRettangolo extends javax.swing.JFrame {
     private void CalcolaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CalcolaActionPerformed
         // TODO add your handling code here:
         double base, altezza, area;
+        try{
         base = Double.parseDouble(BaseField.getText());
         altezza = Double.parseDouble(AltezzaField.getText());
         area = base * altezza;
         AreaField.setText(Double.toString(area));
+        } catch(NumberFormatException e){
+            System.out.println("Sigma");
+            JOptionPane.showMessageDialog(Calcola, "Inserisci numero!", "Errore", JOptionPane.ERROR_MESSAGE);
+            
+        }
     }//GEN-LAST:event_CalcolaActionPerformed
 
     private void CancellaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancellaActionPerformed
